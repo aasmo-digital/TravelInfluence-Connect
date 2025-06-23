@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TravelInfluenceConnect</string>
+    <string name="facebook_app_id">758369196517861</string>
+    <string name="fb_login_protocol_scheme">fb758369196517861</string>
+</resources>
