@@ -7,13 +7,13 @@ import {
   StatusBar,
   SafeAreaView,
 } from 'react-native';
-import {Colors} from '../../../constants';
+import {Colors, CustomFonts, FontSize} from '../../../constants';
 
 const SplashScreen = ({navigation}: any) => {
   // Ye code 3 second ke baad user ko Login screen par bhej dega
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.replace('Login'); // 'replace' use kiya taaki user back karke splash screen par na aa sake
+      navigation.replace('HotelApp'); // 'replace' use kiya taaki user back karke splash screen par na aa sake
     }, 3000); // 3000 milliseconds = 3 seconds
 
     return () => clearTimeout(timer); // Cleanup function
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   heroImage: {
     width: '100%',
-    height: '60%', // Screen ka 60% hissa image legi
+    height: '70%', // Screen ka 60% hissa image legi
   },
   contentContainer: {
     flex: 1, // Bacha hua poora space ye lega
@@ -57,13 +57,13 @@ const styles = StyleSheet.create({
   },
   tagline: {
     fontSize: 16,
-    fontFamily: 'Poppins-Regular',
+    fontFamily: CustomFonts?.PoppinsRegular,
     color: '#8898aa', // Thoda halka color
     marginBottom: 10,
   },
   mainTitle: {
-    fontSize: 32,
-    fontFamily: 'Poppins-Bold',
+    fontSize: FontSize?.[26],
+    fontFamily: CustomFonts?.PoppinsSemiBold,
     color: '#1E2A32', // Dark black color
     textAlign: 'center',
     lineHeight: 40,

@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import DiscoverScreen from '../screens/hotel/DiscoverScreen/DiscoverScreen';
 import CampaignsScreen from '../screens/shared/Campaigns/CampaignsScreen';
 import HotelProfile from '../screens/hotel/hotelProfile/HotelProfile';
+import ChatNavigator from './ChatNavigation';
 
 // Influencer ke liye neeche ke Tabs
 const HotelTabs = () => {
@@ -45,6 +46,16 @@ const HotelTabs = () => {
           ),
         }}
       />
+
+      {/* <Tab.Screen
+        name="Messages"
+        component={ChatNavigator} // <-- USE THE CHAT NAVIGATOR HERE
+        options={{
+          tabBarIcon: ({color, size}) => (
+            <Icon name="chatbubbles-outline" color={color} size={size} />
+          ),
+        }}
+      /> */}
       <Tab.Screen
         name="Profile"
         component={HotelProfile}
