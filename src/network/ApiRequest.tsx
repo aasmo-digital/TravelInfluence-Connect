@@ -1,13 +1,18 @@
-import axios, { Method } from 'axios';
+import axios, {Method} from 'axios';
 
 type ApiRequestProps = {
   baseUrl: string;
   method: Method; // 'GET' | 'POST' | 'PUT' | 'DELETE' etc.
-  req?: object;   // Optional request body
+  req?: object; // Optional request body
   isForm?: boolean; // If true, send as 'multipart/form-data'
 };
 
-const ApiRequest = async ({ baseUrl, method, req = {}, isForm = false }: ApiRequestProps) => {
+const ApiRequest = async ({
+  baseUrl,
+  method,
+  req = {},
+  isForm = false,
+}: ApiRequestProps) => {
   try {
     const headers: any = {
       'Content-Type': isForm ? 'multipart/form-data' : 'application/json',
